@@ -1,25 +1,23 @@
 import React, { Component } from 'react'
-import HomeScreen from './HomeScreen.js'
-import MainScreenNavigator from '../ChatScreen/index.js'
 import Profile from '../ProfileScreen/index.js'
 import SideBar from '../SideBar/SideBar.js'
 import Login from '../Login.js'
-import HomeTabs from './HomeTabs'
+import {HomeTabs, HomeStack} from './HomeTabs'
 import { DrawerNavigator } from 'react-navigation'
+import {AppHeader} from '../AppHeader/AppHeader'
 const HomeScreenRouter = DrawerNavigator(
   {
-    Home: { screen: HomeScreen },
-    Chat: { screen: MainScreenNavigator },
     Profile: { screen: Profile },
-    Login: { 
-      screen: Login,
-      navigationOptions: { header: null } 
+    Logout: { 
+      screen: Login
     },
-    HomeTabs: {
-      screen: HomeTabs
+    Home: {
+      screen: HomeStack
     }
   },
   {
+    drawerPosition: 'right',
+    initialRouteName: 'Home',
     contentComponent: props => <SideBar {...props} />
   }
 )

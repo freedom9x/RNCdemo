@@ -1,5 +1,4 @@
-import {StyleSheet} from 'react-native'
-
+import {Platform, StatusBar, StyleSheet} from 'react-native'
 export  const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -22,5 +21,13 @@ export  const styles = StyleSheet.create({
   loginTitle:{
     fontSize: 30,
     fontWeight: 'bold'
+  },
+  marginAndroid: {
+    ...Platform.select({
+      android: {
+        marginTop: StatusBar.currentHeight
+      }
+    })
+
   }
 })

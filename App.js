@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Expo from 'expo'
 import HomeScreen from './src/HomeScreen/index.js'
+import HomeScreenRouter from './src/HomeScreen/index'
 import {StackNavigator} from 'react-navigation'
 import Login from './src/Login'
 import { Container, 
@@ -9,15 +10,20 @@ import { Container,
 const RootStack = StackNavigator({
   Login: {
     screen: Login,
-    navigationOptions: { header: null } 
+    navigationOptions: { 
+      header: null
+    } 
   },
-  Home: {
-    screen: HomeScreen,
+  HomeScreenRouter: {
+    screen: HomeScreenRouter,
     navigationOptions: { header: null } 
   },
 },
 {
   initialRouteName: 'Login',
+  navigationOptions: {
+    gesturesEnabled: false
+  }
 })
 
 export default class App extends Component {

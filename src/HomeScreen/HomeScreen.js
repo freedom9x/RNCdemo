@@ -3,23 +3,16 @@ import { Container,
   Header, Title, Left, Icon, Right, Button, Body, Content,Text, Card, 
   CardItem 
 } from 'native-base'
+import AppHeader from '../AppHeader/AppHeader'
 export default class HomeScreen extends React.Component {
   render() {
     return (
       <Container>
-        <Header>
-          <Left>
-            <Button
-              transparent
-              onPress={() => this.props.navigation.navigate('DrawerOpen')}>
-              <Icon name="menu" />
-            </Button>
-          </Left>
-          <Body>
-            <Title>HomeScreen</Title>
-          </Body>
-          <Right />
-        </Header>
+        <AppHeader
+          title='HomeScreen'
+          isMenu={true}
+          isBack={false}
+        />
         <Content padder>
           <Card>
             <CardItem>
