@@ -28,7 +28,7 @@ export default class SideBar extends React.Component {
               alignSelf: 'stretch'
             }}>
               <Text>
-           hienpham2991@gmail.com
+           freedom9x@gmail.com
               </Text>
             </View>
           </Content>

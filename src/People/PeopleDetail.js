@@ -20,5 +20,5 @@ export default class PeopleDetail extends React.Component {
   }
 }
 PeopleDetail.navigationOptions = {
-  header: <AppHeader title='Notifications Detail' isMenu={true} isBack={true} nameBack='NotificationList' />  
+  header: <AppHeader title='Notifications Detail' isMenu={false} isBack={true} nameBack='NotificationList' />  
 }

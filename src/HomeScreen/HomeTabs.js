@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { TabNavigator, StackNavigator } from 'react-navigation'
-import { Button, Text, Icon, Footer, FooterTab, StyleProvider } from 'native-base'
+import { Button, Text, Icon, Footer, FooterTab, StyleProvider, Badge } from 'native-base'
 import {NotificationList, NotificationListStack} from './NotificationList'
 import {PeopleList, PeopleListStack} from './PeopleList'
 import getTheme from '../../native-base-theme/components'
@@ -32,29 +32,25 @@ export const HomeTabs = TabNavigator(
           <Footer>
             <FooterTab>
               <Button
-                transparent
-                vertical
+                badge
                 active={props.navigationState.index === 0}
                 onPress={
                   () => 
                     props.navigation.navigate('Notifications')
                 }>
+                <Badge><Text>5</Text></Badge>
                 <Icon 
                   ios={iconClass('ios-notifications',0)}
                   android={iconClass('ios-notifications',0)}
                 />
-                <Text>Notification</Text>
               </Button>
               <Button
-                transparent
-                vertical
                 active={props.navigationState.index === 1}
                 onPress={() => props.navigation.navigate('People')}>
                 <Icon  
                   ios={iconClass('ios-people',1)}
                   android={iconClass('ios-people',1)}  
                 />
-                <Text>People</Text>
               </Button>
             </FooterTab>
           </Footer>

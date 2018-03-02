@@ -22,7 +22,7 @@ export default class NotificationDetail extends React.Component {
 }
 NotificationDetail.navigationOptions = ({navigation})=>({
   header: <AppHeader title={`${navigation.state.params.id}`} 
-    isMenu={true} isBack={true} 
+    isMenu={false} isBack={true} 
     nameBack='NotificationList' 
   />  
 })
