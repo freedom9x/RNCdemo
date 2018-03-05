@@ -4,7 +4,7 @@ import { Button, Text, Icon, Footer, FooterTab, StyleProvider, Badge } from 'nat
 import {NotificationList, NotificationListStack} from './NotificationList'
 import {PeopleList, PeopleListStack} from './PeopleList'
 import getTheme from '../../native-base-theme/components'
-import platform from '../../native-base-theme/variables/platform'
+import myCustom from '../../native-base-theme/variables/myCustom'
 export const HomeTabs = TabNavigator(
   {
     Notifications: { 
@@ -28,7 +28,7 @@ export const HomeTabs = TabNavigator(
         }
       }
       return (
-        <StyleProvider style={getTheme(platform)}>
+        <StyleProvider style={getTheme(myCustom)}>
           <Footer>
             <FooterTab>
               <Button
