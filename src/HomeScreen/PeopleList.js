@@ -6,7 +6,7 @@ import {StackNavigator} from 'react-navigation'
 import AppHeader from '../AppHeader/AppHeader'
 import getTheme from '../../native-base-theme/components'
 import platform from '../../native-base-theme/variables/platform'
-import PeopleDetail from '../Notification/NotificationDetail'
+import PeopleDetail from '../People/PeopleDetail'
 const data = [1,2,3,4,5]
 const uriImage = 'https://user-images.githubusercontent.com/5037791/36775543-15af3a1a-1c95-11e8-8a6e-9223e58c5247.png'
 
